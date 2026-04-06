@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Delta Terms of Service — the terms governing your use of the Delta health coaching application.">
+  <title>Terms of Service — Delta</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #09090b;
+      --bg-raised: #111113;
+      --bg-card: #16161a;
+      --border: #1e1e24;
+      --text-primary: #ececef;
+      --text-secondary: #8b8b96;
+      --text-muted: #52525b;
+      --accent: #00d4aa;
+      --accent-glow: rgba(0, 212, 170, 0.15);
+      --accent-subtle: rgba(0, 212, 170, 0.06);
+      --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --max-width: 720px;
+    }
+
+    html {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9, 9, 11, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      height: 26px;
+      width: auto;
+    }
+
+    .nav-back {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .nav-back:hover {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    /* Layout */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .page-header {
+      padding: 80px 0 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-size: clamp(32px, 6vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .page-meta {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Content */
+    .content {
+      padding: 56px 0 80px;
+    }
+
+    .policy-section {
+      margin-bottom: 56px;
+    }
+
+    .policy-section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      padding-top: 8px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    p strong {
+      color: var(--text-primary);
+    }
+
+    ul {
+      margin: 0 0 16px 0;
+      padding-left: 20px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    ul li strong {
+      color: var(--text-primary);
+    }
+
+    .highlight {
+      display: block;
+      padding: 20px 24px;
+      border-left: 2px solid var(--accent);
+      background: var(--accent-subtle);
+      border-radius: 0 6px 6px 0;
+      margin: 24px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-left {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-right {
+      font-size: 13px;
+    }
+
+    .footer-right a {
+      color: var(--text-secondary);
+    }
+
+    .footer-right a:hover {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page-header {
+        padding: 48px 0 36px;
+      }
+
+      .content {
+        padding: 40px 0 60px;
+      }
+
+      footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="index.html"><img src="dark_mode_logo_horizontal.svg" alt="Delta" class="nav-logo"></a>
+      <a href="index.html" class="nav-back">&larr; Back to home</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <span class="page-eyebrow">Legal</span>
+      <h1 class="page-title">Terms of Service</h1>
+      <p class="page-meta">Effective date: April 6, 2026 &nbsp;&middot;&nbsp; usedelta.app</p>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+
+      <div class="policy-section">
+        <p>
+          These Terms of Service ("Terms") govern your use of Delta ("we," "us," or "our"), a personal
+          health coaching application available as an iOS app and related services. By creating an account
+          or using Delta, you agree to these Terms. If you do not agree, do not use the application.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>1. Description of the service</h2>
+        <p>
+          Delta is a health coaching application that aggregates biometric and fitness data from
+          third-party sources — including Apple Health, Oura Ring, and Peloton — to compute daily
+          recovery, training load, and strain scores, and to generate personalized coaching briefs
+          powered by AI.
+        </p>
+        <p>
+          Delta also provides conversational nutrition logging, allowing you to track meals and
+          macro intake via natural language.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>2. Eligibility</h2>
+        <p>
+          You must be at least 16 years of age to use Delta. By using the service, you represent
+          that you meet this requirement. If we learn that a user under 16 has created an account,
+          we will terminate the account and delete all associated data.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>3. Account and security</h2>
+        <p>
+          You are responsible for maintaining the confidentiality of your account credentials and
+          for all activity that occurs under your account. You agree to notify us promptly at
+          <a href="mailto:hello@usedelta.app">hello@usedelta.app</a> if you become aware of any
+          unauthorized use of your account.
+        </p>
+        <p>
+          We reserve the right to suspend or terminate accounts that violate these Terms or that
+          we reasonably believe are being used fraudulently.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>4. Third-party integrations</h2>
+        <p>
+          Delta connects to third-party services to retrieve your health and fitness data. These
+          integrations are subject to the following conditions:
+        </p>
+        <ul>
+          <li>
+            <strong>Apple Health</strong> — Data is accessed on-device via Apple's HealthKit framework.
+            You control which data categories Delta can read through iOS permissions.
+          </li>
+          <li>
+            <strong>Oura Ring</strong> — Data is accessed via Oura's official OAuth API. You authorize
+            specific data scopes during the connection flow and may revoke access at any time from
+            your Oura account settings or from within Delta.
+          </li>
+          <li>
+            <strong>Peloton</strong> — Workout data is accessed via Peloton's platform. You may
+            disconnect this integration at any time from Delta's settings.
+          </li>
+        </ul>
+        <p>
+          Delta is not affiliated with, endorsed by, or sponsored by Oura Health Oy, Apple Inc.,
+          or Peloton Interactive, Inc. Your use of those third-party services is governed by their
+          respective terms of service and privacy policies.
+        </p>
+        <span class="highlight">
+          You may disconnect any third-party integration at any time from Settings &gt; Integrations
+          in the Delta app. Disconnecting stops new data from being fetched. To delete previously
+          synced data, contact us at <a href="mailto:hello@usedelta.app">hello@usedelta.app</a>.
+        </span>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>5. Use of AI</h2>
+        <p>
+          Delta uses Claude AI (provided by Anthropic) to generate coaching brief text. When generating
+          briefs, we send Anthropic anonymized daily metric summaries — not raw health records or
+          personally identifying information. Anthropic does not use this data to train models.
+        </p>
+        <p>
+          AI-generated coaching content is informational only and does not constitute medical advice.
+          See Section 8 (Disclaimer) below.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>6. Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use Delta for any unlawful purpose or in violation of any applicable law</li>
+          <li>Attempt to reverse-engineer, decompile, or disassemble the application</li>
+          <li>Interfere with or disrupt the integrity or performance of the service</li>
+          <li>Access another user's account or data without authorization</li>
+          <li>Use the service to transmit malicious code or conduct automated scraping</li>
+          <li>Resell, redistribute, or sublicense access to the service without our written consent</li>
+        </ul>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>7. Intellectual property</h2>
+        <p>
+          All content, features, and functionality of Delta — including the scoring algorithms,
+          coaching brief generation, user interface design, and branding — are owned by Delta and
+          protected by applicable intellectual property laws.
+        </p>
+        <p>
+          Your health data remains yours. We claim no ownership over data you provide or that is
+          imported from third-party integrations.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>8. Disclaimer</h2>
+        <span class="highlight">
+          Delta is a wellness and fitness tool. It is not a medical device and does not provide
+          medical advice, diagnosis, or treatment. The coaching briefs, scores, and recommendations
+          generated by Delta are for informational and educational purposes only. Always consult a
+          qualified healthcare provider before making decisions about your health, fitness, or nutrition.
+        </span>
+        <p>
+          Delta is provided on an "as is" and "as available" basis, without warranties of any kind,
+          either express or implied, including but not limited to implied warranties of merchantability,
+          fitness for a particular purpose, or non-infringement. We do not warrant that the service
+          will be uninterrupted, error-free, or completely secure.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>9. Limitation of liability</h2>
+        <p>
+          To the fullest extent permitted by applicable law, Delta and its operators shall not be
+          liable for any indirect, incidental, special, consequential, or punitive damages, or any
+          loss of data, profits, or goodwill, arising out of or in connection with your use of the
+          service, even if we have been advised of the possibility of such damages.
+        </p>
+        <p>
+          Our total liability for any claim arising from or related to these Terms or the service
+          shall not exceed the amount you have paid us in the twelve (12) months preceding the claim,
+          or fifty US dollars (USD $50), whichever is greater.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>10. Termination</h2>
+        <p>
+          You may stop using Delta and delete your account at any time. Upon account deletion, all
+          associated health data, scores, briefs, and profile information will be permanently deleted
+          within 30 days.
+        </p>
+        <p>
+          We may suspend or terminate your access to the service at our discretion if you violate
+          these Terms, with or without notice. Upon termination, your right to use the service ceases
+          immediately.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>11. Changes to these Terms</h2>
+        <p>
+          We may update these Terms from time to time. If we make material changes, we will notify
+          you by email at the address associated with your account at least 14 days before the changes
+          take effect. Continued use of Delta after that date constitutes acceptance of the updated
+          Terms. The effective date at the top of this page reflects the most recent revision.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>12. Privacy</h2>
+        <p>
+          Your use of Delta is also governed by our <a href="privacy.html">Privacy Policy</a>,
+          which describes how we collect, use, store, and protect your data. By using Delta, you
+          acknowledge that you have read and understood the Privacy Policy.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>13. Governing law</h2>
+        <p>
+          These Terms shall be governed by and construed in accordance with the laws of the
+          United States, without regard to conflict of law principles. Any disputes arising from
+          these Terms or the service shall be resolved through good-faith negotiation. If a
+          resolution cannot be reached, disputes shall be submitted to binding arbitration.
+        </p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="policy-section">
+        <h2>14. Contact</h2>
+        <p>
+          For questions or concerns about these Terms, contact us at:<br>
+          <a href="mailto:hello@usedelta.app">hello@usedelta.app</a>
+        </p>
+        <p>
+          Delta &mdash; usedelta.app
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Delta &mdash; usedelta.app</div>
+      <div class="footer-right">
+        <a href="index.html">&larr; Back to home</a>
+        &nbsp;&nbsp;
+        <a href="privacy.html">Privacy Policy</a>
+        &nbsp;&nbsp;
+        <a href="mailto:hello@usedelta.app">hello@usedelta.app</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
