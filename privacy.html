@@ -13,16 +13,17 @@
     }
 
     :root {
-      --bg: #0d0d0d;
-      --bg-raised: #141414;
-      --bg-card: #1a1a1a;
-      --border: #242424;
-      --text-primary: #f0f0f0;
-      --text-secondary: #888;
-      --text-muted: #555;
-      --accent: #00C9A7;
-      --accent-dim: rgba(0, 201, 167, 0.12);
-      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --bg: #09090b;
+      --bg-raised: #111113;
+      --bg-card: #16161a;
+      --border: #1e1e24;
+      --text-primary: #ececef;
+      --text-secondary: #8b8b96;
+      --text-muted: #52525b;
+      --accent: #00d4aa;
+      --accent-glow: rgba(0, 212, 170, 0.15);
+      --accent-subtle: rgba(0, 212, 170, 0.06);
+      --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       --max-width: 720px;
     }
 
@@ -50,14 +51,21 @@
 
     /* Nav */
     nav {
-      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9, 9, 11, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
+      padding: 0;
     }
 
     nav .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: 60px;
     }
 
     .nav-wordmark {
@@ -66,6 +74,11 @@
       letter-spacing: -0.02em;
       color: var(--text-primary);
       text-decoration: none;
+    }
+
+    .nav-wordmark:hover {
+      text-decoration: none;
+      color: var(--text-primary);
     }
 
     .nav-back {
@@ -87,7 +100,7 @@
 
     /* Header */
     .page-header {
-      padding: 64px 0 48px;
+      padding: 80px 0 56px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -95,7 +108,7 @@
       display: inline-block;
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 16px;
@@ -148,6 +161,10 @@
       margin-bottom: 0;
     }
 
+    p strong {
+      color: var(--text-primary);
+    }
+
     ul {
       margin: 0 0 16px 0;
       padding-left: 20px;
@@ -164,11 +181,15 @@
       margin-bottom: 0;
     }
 
+    ul li strong {
+      color: var(--text-primary);
+    }
+
     .highlight {
       display: block;
       padding: 20px 24px;
       border-left: 2px solid var(--accent);
-      background: var(--accent-dim);
+      background: var(--accent-subtle);
       border-radius: 0 6px 6px 0;
       margin: 24px 0;
       font-size: 14px;
@@ -184,7 +205,7 @@
 
     /* Footer */
     footer {
-      padding: 36px 0;
+      padding: 56px 0;
       border-top: 1px solid var(--border);
     }
 
@@ -268,7 +289,7 @@
         <h2>1. What data we collect</h2>
         <p>Delta collects the following categories of health and biometric data when you connect the corresponding integrations:</p>
 
-        <p><strong style="color: var(--text-primary);">From Apple Health (on-device, via HealthKit):</strong></p>
+        <p><strong>From Apple Health (on-device, via HealthKit):</strong></p>
         <ul>
           <li>Workout sessions: type, duration, active energy burned, heart rate data</li>
           <li>Step count and daily activity</li>
@@ -276,7 +297,7 @@
           <li>Other metrics you explicitly authorize in the HealthKit permission dialog</li>
         </ul>
 
-        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">From Oura Ring (coming soon, via Oura OAuth API):</strong></p>
+        <p style="margin-top: 16px;"><strong>From Oura Ring (coming soon, via Oura OAuth API):</strong></p>
         <ul>
           <li>Sleep data: total sleep duration, sleep stages (deep, REM, light, awake), sleep efficiency, sleep timing, and Oura's sleep score</li>
           <li>Heart rate variability (HRV): nightly average and daily mean</li>
@@ -286,18 +307,18 @@
           <li>Body temperature deviation (when available)</li>
         </ul>
 
-        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">From Peloton (coming soon):</strong></p>
+        <p style="margin-top: 16px;"><strong>From Peloton (coming soon):</strong></p>
         <ul>
           <li>Workout history: ride and class type, duration, output, and heart rate data</li>
         </ul>
 
-        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">Nutrition data (entered by you):</strong></p>
+        <p style="margin-top: 16px;"><strong>Nutrition data (entered by you):</strong></p>
         <ul>
           <li>Meal descriptions and food entries you log via natural language in the app</li>
           <li>Parsed macro and calorie estimates derived from your entries</li>
         </ul>
 
-        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">Account data:</strong></p>
+        <p style="margin-top: 16px;"><strong>Account data:</strong></p>
         <ul>
           <li>Email address and password (used for authentication via Supabase Auth)</li>
           <li>Profile settings: age, sex, height, weight, goal profile, and units preference</li>
@@ -357,22 +378,22 @@
         <p>The following third-party services process data on our behalf:</p>
         <ul>
           <li>
-            <strong style="color: var(--text-primary);">Supabase</strong> — Database, authentication, and server infrastructure.
+            <strong>Supabase</strong> — Database, authentication, and server infrastructure.
             Supabase stores your account data and health metric summaries on AWS.
             <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a>
           </li>
           <li>
-            <strong style="color: var(--text-primary);">Anthropic (Claude AI)</strong> — Receives anonymized daily metric summaries
+            <strong>Anthropic (Claude AI)</strong> — Receives anonymized daily metric summaries
             (not raw health data) for the purpose of generating coaching brief text.
             <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>
           </li>
           <li>
-            <strong style="color: var(--text-primary);">Oura Health Oy</strong> (coming soon) — Will provide your Oura Ring data via their official
+            <strong>Oura Health Oy</strong> (coming soon) — Will provide your Oura Ring data via their official
             OAuth API. We will access only the data you explicitly authorize.
             <a href="https://ouraring.com/privacy-policy" target="_blank" rel="noopener">Oura Privacy Policy</a>
           </li>
           <li>
-            <strong style="color: var(--text-primary);">Apple</strong> — HealthKit data is accessed on-device via Apple's HealthKit
+            <strong>Apple</strong> — HealthKit data is accessed on-device via Apple's HealthKit
             framework, under the permissions you grant in iOS Settings.
           </li>
         </ul>
@@ -400,7 +421,7 @@
       <div class="policy-section">
         <h2>6. How to disconnect integrations</h2>
         <p>
-          You can disconnect any integration at any time from the app's <strong style="color: var(--text-primary);">Settings &gt; Integrations</strong> screen.
+          You can disconnect any integration at any time from the app's <strong>Settings &gt; Integrations</strong> screen.
           Disconnecting an integration immediately stops Delta from fetching new data from that source.
           It does not automatically delete previously synced data; to delete historical data from a
           disconnected integration, contact us at <a href="mailto:hello@usedelta.app">hello@usedelta.app</a>.
@@ -421,11 +442,11 @@
         <h2>7. Your rights</h2>
         <p>You have the right to:</p>
         <ul>
-          <li><strong style="color: var(--text-primary);">Access</strong> — request a copy of all data Delta holds about you</li>
-          <li><strong style="color: var(--text-primary);">Correction</strong> — request correction of inaccurate profile data</li>
-          <li><strong style="color: var(--text-primary);">Deletion</strong> — request deletion of your account and all associated data</li>
-          <li><strong style="color: var(--text-primary);">Export</strong> — request an export of your data in a machine-readable format (JSON or CSV)</li>
-          <li><strong style="color: var(--text-primary);">Objection</strong> — object to any processing you did not consent to</li>
+          <li><strong>Access</strong> — request a copy of all data Delta holds about you</li>
+          <li><strong>Correction</strong> — request correction of inaccurate profile data</li>
+          <li><strong>Deletion</strong> — request deletion of your account and all associated data</li>
+          <li><strong>Export</strong> — request an export of your data in a machine-readable format (JSON or CSV)</li>
+          <li><strong>Objection</strong> — object to any processing you did not consent to</li>
         </ul>
         <p>
           To exercise any of these rights, contact us at <a href="mailto:hello@usedelta.app">hello@usedelta.app</a>.
