@@ -268,7 +268,15 @@
         <h2>1. What data we collect</h2>
         <p>Delta collects the following categories of health and biometric data when you connect the corresponding integrations:</p>
 
-        <p><strong style="color: var(--text-primary);">From Oura Ring (via Oura OAuth API):</strong></p>
+        <p><strong style="color: var(--text-primary);">From Apple Health (on-device, via HealthKit):</strong></p>
+        <ul>
+          <li>Workout sessions: type, duration, active energy burned, heart rate data</li>
+          <li>Step count and daily activity</li>
+          <li>Body weight (most recent record)</li>
+          <li>Other metrics you explicitly authorize in the HealthKit permission dialog</li>
+        </ul>
+
+        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">From Oura Ring (coming soon, via Oura OAuth API):</strong></p>
         <ul>
           <li>Sleep data: total sleep duration, sleep stages (deep, REM, light, awake), sleep efficiency, sleep timing, and Oura's sleep score</li>
           <li>Heart rate variability (HRV): nightly average and daily mean</li>
@@ -278,15 +286,7 @@
           <li>Body temperature deviation (when available)</li>
         </ul>
 
-        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">From Apple Health (on-device, via HealthKit):</strong></p>
-        <ul>
-          <li>Workout sessions: type, duration, active energy burned, heart rate data</li>
-          <li>Step count and daily activity</li>
-          <li>Body weight (most recent record)</li>
-          <li>Other metrics you explicitly authorize in the HealthKit permission dialog</li>
-        </ul>
-
-        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">From Peloton (optional):</strong></p>
+        <p style="margin-top: 16px;"><strong style="color: var(--text-primary);">From Peloton (coming soon):</strong></p>
         <ul>
           <li>Workout history: ride and class type, duration, output, and heart rate data</li>
         </ul>
@@ -367,8 +367,8 @@
             <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>
           </li>
           <li>
-            <strong style="color: var(--text-primary);">Oura Health Oy</strong> — Provides your Oura Ring data via their official
-            OAuth API. We access only the data you explicitly authorize.
+            <strong style="color: var(--text-primary);">Oura Health Oy</strong> (coming soon) — Will provide your Oura Ring data via their official
+            OAuth API. We will access only the data you explicitly authorize.
             <a href="https://ouraring.com/privacy-policy" target="_blank" rel="noopener">Oura Privacy Policy</a>
           </li>
           <li>
@@ -406,8 +406,8 @@
           disconnected integration, contact us at <a href="mailto:hello@usedelta.app">hello@usedelta.app</a>.
         </p>
         <p>
-          To revoke Oura's OAuth authorization independently of Delta, you can do so from your
-          Oura account settings at <a href="https://cloud.ouraring.com" target="_blank" rel="noopener">cloud.ouraring.com</a> under Connected Apps.
+          When Oura integration is available, you will be able to revoke OAuth authorization independently of Delta
+          from your Oura account settings at <a href="https://cloud.ouraring.com" target="_blank" rel="noopener">cloud.ouraring.com</a> under Connected Apps.
         </p>
         <p>
           To revoke Apple Health permissions, go to the iOS Settings app, then Privacy &amp; Security
